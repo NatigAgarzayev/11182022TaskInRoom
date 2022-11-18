@@ -10,6 +10,7 @@ body{
 .container {
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0 20px;
 }
 a{
     text-decoration: none;
@@ -50,6 +51,41 @@ li{
 
 .nav__menu-link:hover{
     color: #1ABC9C;
+}
+
+.burger{
+    cursor: pointer;
+    width: 40px;
+    height: 30px;
+    position: relative;
+    display: none;
+}
+
+.burger span{
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    position: absolute;
+    z-index: 22;   
+}
+.burger span:first-child{
+    top: 0;
+}
+.burger span:first-child{
+    top: 50%;
+    transform: translateY(-50%);
+}
+.burger span:last-child{
+    bottom: 0;
+}
+
+@media (max-width: 767px){
+    .burger{
+        display: block;
+    }
+    .nav__menu{
+        display: none;
+    }
 }
 
 /* header end */
@@ -96,6 +132,18 @@ li{
     margin-top: 30px;
     font-size: 24px;
     color: white;
+}
+
+
+@media (max-width: 480px){
+    .intro__title{
+        font-size: 48px;
+    }
+}
+@media (max-width: 375px){
+    .intro__title{
+        font-size: 36px;
+    }
 }
 
 /*into end*/
@@ -202,6 +250,23 @@ li{
     cursor: pointer;
 }
 
+@media (max-width: 768px){
+    .portfolio__grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 480px){
+    .portfolio__grid{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media (max-width: 400px){
+    .portfolio__title{
+        font-size: 36px;
+    }
+}
+
 /*portfolio end*/
 
 /*about start*/
@@ -258,6 +323,7 @@ li{
     margin-top: 40px;
     font-weight: 700;
     transition: all 0.3s ease;
+    white-space: nowrap;
 }
 
 .about__down:hover{
@@ -270,6 +336,46 @@ li{
 .about__down:hover svg path{
     fill: black;
 }
+
+@media (max-width: 992px){
+    .about__textbox{
+        padding: 0 70px;
+    }
+}
+
+@media (max-width: 768px){
+    .about__textbox{
+        padding: 0;
+    }
+}
+@media (max-width: 630px){
+    .about__textbox{
+        flex-direction: column;
+    }
+    .about__textbox-item{
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 400px){
+    .about__title{
+        font-size: 36px;
+    }
+    .about__down{
+        gap: 0;
+    }
+    .about__down svg{
+        display: none;
+    }
+    .about__textbox-item{
+        font-size: 14px;
+    }
+    .about__down{
+        font-size: 12px;
+    }
+}
+
+
 /*about end*/
 
 /*contact start*/
@@ -286,6 +392,7 @@ li{
     text-transform: uppercase;
     font-weight: 700;
     text-align: center;
+    white-space: nowrap;
 }
 .contact__decoration {
     display: flex;
@@ -348,6 +455,27 @@ li{
     color: white;
     background-color: #1ABC9C;
 }
+
+@media (max-width: 992px){
+    .contact__body {
+        padding: 0 150px;
+    }
+}
+@media (max-width: 768px){
+    .contact__body {
+        padding: 0 70px;
+    }
+}
+
+@media (max-width: 400px){
+    .contact__body {
+        padding: 0;
+    }
+    .contact__title{
+        font-size: 36px;
+    }
+}
+
 
 /*contact end*/
 
@@ -417,6 +545,23 @@ li{
 .footer__about p a{
     color: #1ABC9C;
     text-decoration: underline;
+}
+
+@media (max-width: 992px){
+    .footer__body {
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .footer__about{
+        flex: none;
+    }
+}
+
+@media (max-width: 580px){
+    .footer__about{
+        white-space: normal;
+    }
 }
 
 /*footer end*/
